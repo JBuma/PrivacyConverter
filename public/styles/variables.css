@@ -1,0 +1,30 @@
+:root {
+  --gray: rgb(28, 31, 33);
+  --red: #d5896f;
+  --yellow: #dab785;
+  --green: #70a288;
+  --white: #e0e0ce;
+  /* --blue: #031d45; */
+  --blue: #121c29;
+  --blue-light: #04395e;
+  --black: black;
+
+  --primary: var(--blue-light);
+  --secondary: var(--green);
+
+  --shadow-color: 205deg 100% 9%;
+  --shadow-elevation-low: 0px 0.5px 0.5px hsl(var(--shadow-color) / 0.55),
+    0px 0.8px 0.7px -2px hsl(var(--shadow-color) / 0.41),
+    0px 2px 1.8px -4px hsl(var(--shadow-color) / 0.28);
+  --shadow-elevation-medium: 0px 0.5px 0.5px hsl(var(--shadow-color) / 0.58),
+    0px 1.2px 1.1px -1.3px hsl(var(--shadow-color) / 0.47),
+    0px 3.7px 3.3px -2.7px hsl(var(--shadow-color) / 0.36),
+    -0.1px 10.2px 9.2px -4px hsl(var(--shadow-color) / 0.25);
+  --shadow-elevation-high: 0px 0.5px 0.5px hsl(var(--shadow-color) / 0.61),
+    0px 1.8px 1.6px -0.7px hsl(var(--shadow-color) / 0.55),
+    0px 4.1px 3.7px -1.3px hsl(var(--shadow-color) / 0.48),
+    -0.1px 8.7px 7.8px -2px hsl(var(--shadow-color) / 0.42),
+    -0.2px 17.1px 15.4px -2.7px hsl(var(--shadow-color) / 0.35),
+    -0.3px 30.7px 27.6px -3.3px hsl(var(--shadow-color) / 0.28),
+    -0.5px 50.9px 45.8px -4px hsl(var(--shadow-color) / 0.22);
+}
