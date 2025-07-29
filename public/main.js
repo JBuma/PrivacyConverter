@@ -1,3 +1,4 @@
+/** @param {string} url: */
 function convertTwitter(url) {
   const regex = /(.*\.\w{1,3})/;
   const newUrl = url.replace(regex, "nitter.net");
@@ -6,7 +7,7 @@ function convertTwitter(url) {
 
 /** @param {string} url: */
 function convertInstagram(url) {
-  const regex = /\/(\/?p?\/?\w*)\/(?:\s|$)/;
+  const regex = /\/(\/?p?\/?\w*)\/?(?:\s|$)/;
   const match = url.replace("/reel/", "/p/").match(regex);
   if (match) {
     const newUrl = `imginn.com/${match[1]}`;
@@ -14,34 +15,16 @@ function convertInstagram(url) {
   }
 }
 
-function convertYoutube(url) {}
-
-function convertReddit(url) {}
-
-function convertUrl(url) {}
-
 /** @param {string} url: */
-function inferService(url) {
+function getServiceName(url) {
   const regex = /(?:https?:\/\/)?(?:www.)?(.+)\./;
   const match = url.match(regex);
   if (match) {
     return match[1];
   }
-  if (url.includes("x.com") || url.includes("twitter")) {
-    return "twitter";
-  }
-  if (url.includes("youtube")) {
-    return "youtube";
-  }
-  if (url.includes("instagram")) {
-    console.log("instaaaa");
-    return "instagram";
-  }
-  if (url.includes("reddit")) {
-    return "reddit";
-  }
 }
 
+/** @param {string} url: */
 function setNewLink(url) {
   const outputElement = document.querySelector(".output");
   const link = document.createElement("a");
@@ -54,7 +37,7 @@ function setNewLink(url) {
 
 /** @param {string} value */
 function onInput(value) {
-  const service = inferService(value);
+  const service = getServiceName(value);
   switch (service) {
     case "twitter":
     case "x":

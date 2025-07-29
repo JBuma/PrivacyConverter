@@ -27,7 +27,7 @@ main {
   min-block-size: 25vh;
   min-inline-size: 50vw;
   padding: 1rem;
-  box-shadow: var(--shadow-elevation-high);
+  box-shadow: var(--shadow-elevation-medium);
   display: flex;
   flex-direction: column;
   gap: 2rem;
@@ -43,5 +43,5 @@ input {
 }
 
 a {
-  color: var(--accent);
+  color: var(--yellow);
 }
