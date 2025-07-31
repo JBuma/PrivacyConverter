@@ -7,7 +7,7 @@ function convertTwitter(url) {
 
 /** @param {string} url: */
 function convertInstagram(url) {
-  const regex = /\/(\/?p?\/?\w*)\/?(?:\s|$)/;
+  const regex = /\/(\/?p?\/?\w*)\/?(?:\s|$|\?|\&)/;
   const match = url.replace("/reel/", "/p/").match(regex);
   if (match) {
     const newUrl = `imginn.com/${match[1]}`;
