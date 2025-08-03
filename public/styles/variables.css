@@ -1,30 +1,30 @@
 :root {
-  --gray: rgb(28, 31, 33);
+  --dark-gray: #141516;
+  --gray: rgb(27, 32, 32);
   --red: #d5896f;
   --yellow: #dab785;
   --green: #70a288;
   --white: #e0e0ce;
-  /* --blue: #031d45; */
   --blue: #121c29;
   --blue-light: #04395e;
   --black: black;
 
   --primary: var(--blue-light);
   --secondary: var(--green);
+  --accent: var(--yellow);
 
-  --shadow-color: 205deg 100% 9%;
-  --shadow-elevation-low: 0px 0.5px 0.5px hsl(var(--shadow-color) / 0.55),
-    0px 0.8px 0.7px -2px hsl(var(--shadow-color) / 0.41),
-    0px 2px 1.8px -4px hsl(var(--shadow-color) / 0.28);
+  --step--2: clamp(0.7813rem, 0.7736rem + 0.0341vw, 0.8rem);
+  --step--1: clamp(0.9375rem, 0.9119rem + 0.1136vw, 1rem);
+  --step-0: clamp(1.125rem, 1.0739rem + 0.2273vw, 1.25rem);
+  --step-1: clamp(1.35rem, 1.2631rem + 0.3864vw, 1.5625rem);
+  --step-2: clamp(1.62rem, 1.4837rem + 0.6057vw, 1.9531rem);
+  --step-3: clamp(1.944rem, 1.7405rem + 0.9044vw, 2.4414rem);
+  --step-4: clamp(2.3328rem, 2.0387rem + 1.3072vw, 3.0518rem);
+  --step-5: clamp(2.7994rem, 2.384rem + 1.8461vw, 3.8147rem);
+
+  --shadow-color: 180deg 100% 9%;
   --shadow-elevation-medium: 0px 0.5px 0.5px hsl(var(--shadow-color) / 0.58),
     0px 1.2px 1.1px -1.3px hsl(var(--shadow-color) / 0.47),
     0px 3.7px 3.3px -2.7px hsl(var(--shadow-color) / 0.36),
     -0.1px 10.2px 9.2px -4px hsl(var(--shadow-color) / 0.25);
-  --shadow-elevation-high: 0px 0.5px 0.5px hsl(var(--shadow-color) / 0.61),
-    0px 1.8px 1.6px -0.7px hsl(var(--shadow-color) / 0.55),
-    0px 4.1px 3.7px -1.3px hsl(var(--shadow-color) / 0.48),
-    -0.1px 8.7px 7.8px -2px hsl(var(--shadow-color) / 0.42),
-    -0.2px 17.1px 15.4px -2.7px hsl(var(--shadow-color) / 0.35),
-    -0.3px 30.7px 27.6px -3.3px hsl(var(--shadow-color) / 0.28),
-    -0.5px 50.9px 45.8px -4px hsl(var(--shadow-color) / 0.22);
 }

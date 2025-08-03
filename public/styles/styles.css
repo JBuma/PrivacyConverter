@@ -7,30 +7,47 @@ html {
   font-size: 120%;
 }
 
+h1 {
+  font-size: var(--step-5);
+}
+
+h2 {
+  font-size: var(--step-4);
+}
+
 body,
 html {
   block-size: 100%;
 }
 
 body {
-  background-color: var(--blue);
+  background-color: var(--dark-gray);
   color: var(--white);
-  display: grid;
-  place-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   padding: 1rem;
 }
 
 main {
-  background-color: var(--primary);
+  background-color: var(--gray);
   border: 2px solid var(--secondary);
+  margin-block-start: 4rem;
   border-radius: 1rem;
   min-block-size: 25vh;
   min-inline-size: 50vw;
-  padding: 1rem;
+  max-inline-size: min(30rem, 100vw);
+  padding: 2rem;
   box-shadow: var(--shadow-elevation-medium);
   display: flex;
   flex-direction: column;
   gap: 2rem;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
 input {
@@ -43,5 +60,5 @@ input {
 }
 
 a {
-  color: var(--yellow);
+  color: var(--accent);
 }
