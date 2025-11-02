@@ -6,6 +6,13 @@ function convertTwitter(url) {
 }
 
 /** @param {string} url: */
+function convertTiktok(url) {
+  const regex = /(.*\.\w{1,3})/;
+  const newUrl = url.replace(regex, "seetiktok.com");
+  return newUrl;
+}
+
+/** @param {string} url: */
 function convertInstagram(url) {
   const regex = /\/(\/?p?\/?\w*)\/?(?:\s|$|\?|\&)/;
   const match = url.replace("/reel/", "/p/").match(regex);
@@ -42,6 +49,9 @@ function onInput(value) {
     case "twitter":
     case "x":
       setNewLink(convertTwitter(value));
+      break;
+    case "tiktok":
+      setNewLink(convertTiktok(value));
       break;
     case "instagram":
       setNewLink(convertInstagram(value));
